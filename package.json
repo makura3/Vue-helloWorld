@@ -1,0 +1,26 @@
+{
+  "name": "vue-helloworld",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/makura3/Vue-helloWorld.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/makura3/Vue-helloWorld/issues"
+  },
+  "homepage": "https://github.com/makura3/Vue-helloWorld#readme",
+  "devDependencies": {
+    "vue-loader": "^15.0.11",
+    "webpack": "^4.8.3"
+  },
+  "dependencies": {
+    "vue": "^2.5.16"
+  }
+}
