@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.runtime.js"></script> -->
+  </head>
+  <body>
+    <div id="components-demo">
+      <button-counter></button-counter>
+    </div>
+  </body>
+  <script>
+    // button-counter と呼ばれる新しいコンポーネントを定義します
+    Vue.component('button-counter', {
+      data: function () {
+        return {
+          count: 0
+        }
+      },
+      template: `<div><button v-on:click="count++">You clicked me {{ count }} times.</button>
+                  <p>文字列テンプレートの場合は完全ビルドが必要です。vue.runtime.jsを読み込むと表示されません。</p>
+                </div>`
+    });
+
+    //呼び出し
+    new Vue({ el: '#components-demo' });
+  </script>
+</html>

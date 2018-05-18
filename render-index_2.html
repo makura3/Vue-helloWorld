@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.runtime.js"></script> -->
+  </head>
+  <body>
+    <div id="components-demo">
+      <anchored-heading :level="1">
+        <a href="#top">これはテンプレートに切り出しているので完全ビルドが必要になります。</a>
+      </anchored-heading>
+      <anchored-heading :level="2">
+        <a href="#top">Hello world!</a>
+      </anchored-heading>
+      <anchored-heading :level="3">
+        <a href="#top">Hello world!</a>
+      </anchored-heading>
+    </div>
+  </body>
+  <script>
+
+    // anchored-heading と呼ばれる新しいコンポーネントを定義します
+    Vue.component('anchored-heading', {
+      render: function (createElement) {
+        //render関数は、レンダリングする内容をreturnする必要がある
+        return createElement(
+          'h' + this.level,   // タグ名
+          this.$slots.default // 子の配列
+        )
+      },
+      props: {
+        level: {
+          type: Number,
+          required: true
+        }
+      }
+    });
+
+    //呼び出し
+    new Vue({ 
+      el: '#components-demo'
+    });
+  </script>
+</html>
