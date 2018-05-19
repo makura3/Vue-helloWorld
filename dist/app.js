@@ -171,7 +171,7 @@ eval("var g;\r\n\r\n// This works in non-strict mode\r\ng = (function() {\r\n\tr
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ \"./node_modules/vue/dist/vue.runtime.esm.js\");\n/* harmony import */ var _index_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./index.vue */ \"./src/index.vue\");\n\n\n\n// root インスタンスを作成する\nnew vue__WEBPACK_IMPORTED_MODULE_0__[\"default\"]({\n  el: '#components-demo',\n  components: { 'index': _index_vue__WEBPACK_IMPORTED_MODULE_1__[\"default\"] }\n});\n\n//# sourceURL=webpack:///./src/app.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ \"./node_modules/vue/dist/vue.runtime.esm.js\");\n/* harmony import */ var _index_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./index.vue */ \"./src/index.vue\");\n\n\n\n// root インスタンスを作成する\nnew vue__WEBPACK_IMPORTED_MODULE_0__[\"default\"]({\n  el: '#components-demo',\n  render: h => h(_index_vue__WEBPACK_IMPORTED_MODULE_1__[\"default\"])\n});\n\n//# sourceURL=webpack:///./src/app.js?");
 
 /***/ }),
 
